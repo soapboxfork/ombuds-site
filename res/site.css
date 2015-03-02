@@ -79,6 +79,7 @@ body {
     margin-top: 30px;
 }
 
+/********** Home Page Styles ***********/
 
 h2.bold {
     text-align: center;
@@ -138,4 +139,40 @@ h4.add {
 
 #ask {
     margin-bottom: 40px;
+}
+
+/**************** People Styles *****************/
+div.about {
+    height: 200px;
+}
+
+div.headshot img {
+    height: 125px;
+    width: 125px;
+    margin-top: 33px;
+}
+
+div.headshot {
+    float: left;
+    height: 150px;
+}
+
+div.text {
+    margin-left: 40px;
+    float: left; 
+    width: 80%;
+}
+
+div.text code {
+    font-size: 16px
+}
+
+div.text p.links a {
+    margin: 0 25px;
+}
+
+div.text p.links :first-child {
+    margin-left: 0;
+}
+    margin: 0 25px;
 }
