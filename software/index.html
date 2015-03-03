@@ -42,3 +42,31 @@ This system does not depend on the honesty or availability of any single website
 Instead, Ombuds uses the global distribution of the block chain to ensure the availability of the public record.
 </p>
 
+<hr>
+
+Three components comprise the Ombuds system, each with a different trust model.
+
+<h4>Desktop</h4>
+<p>Model: trust yourself.</p>
+<p>
+The desktop client includes a Bitcoin full node, thus receives every Bitcoin transaction and every Bitcoin block.  The client parses all this information, extracts Ombuds bulletins, and indexes them locally.  Every Ombuds statement ever published in the block chain can be read using the desktop client.  This provable transparency comes at the cost of disk space, processing power, and bandwidth, but whose price is minimal for modern machines.
+</p>
+<p>
+The desktop client has a Bitcoin wallet and an Ombuds message formatter.  These are presented to the user in a familiar "create public statement" interface, akin to publishing a tweet.  The client confirms block chain inclusion of Ombuds bulletins.
+</p>
+
+<h4>Mobile</h4>
+<p>Model: trust your Bitcoin peers.</p>
+<p>
+The mobile client includes an SPV client with bloom filters, thus receives only relevant Bitcoin transactions and every Bitcoin block header.  Trusting your Bitcoin peers to honor bloom filters reduces total bandwidth usage and recording only block headers reduces total disk space, yet introduces doubt in complete message transparency.  Unlike the desktop client, the mobile client does not have an index of all Ombuds statements.  These compromises are necessary for the convenience of mobile devices.
+</p>
+
+<p>
+The mobile client has a full featured Bitcoin wallet and an Ombuds message formatter, also presented to the user in a familiar interface.  The mobile client confirms block chain inclusion of Ombuds bulletins, but again reliant on peers honoring bloom filters.  Peers, in practice, do honor bloom filters.
+</p>
+
+<h4>Web Relay</h4>
+<p>Model: trust someone else.</p>
+<p>
+Someone running an Ombuds Desktop Client possesses an index of all Ombuds statements.  This index can be formatted and delivered as a web page, viewable to anyone with a browser and an [uncensored] Internet connection.  However, the person viewing Ombuds statements must completely trust the web relay to not censor content.  This option provides ultimate convenience: zero disk space, near zero processing power, and near zero bandwidth to see Ombuds bulletins, but lost is provable transparency of bulletins.
+</p>
