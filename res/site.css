@@ -90,14 +90,13 @@ h4.add {
 }
 
 div.property {
-    height: 170px;
+    height: 150px;
 }
 
 div.property p {
     text-align: center;
     margin: 0 auto;
-    width: 190px;  
-
+    width: 210px;  
 }
 
 #transparent, #immutable, #distributed {
