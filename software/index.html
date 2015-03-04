@@ -6,19 +6,19 @@ layout: default
 <h2>Experiment with Ombuds</h2>
 
 <p>
-For an end user who justs wants to download something, we have two pieces of software for you to test out.
+For an end user who just wants to download something, we have two pieces of software for you to test out.
 If you have an android phone then sign up for the alpha release <a href="https://play.google.com/apps/testing/io.ahimsa.ahimsa_app">here</a>. 
 If you run a Unix OS you can (theoretically) download and build a desktop client from <a href="https://github.com/soapboxsys/OmbudsCore">Github</a>.
 </p>
 
-<p>There are three ways to interact with Ombuds, each with a different trust model.</p>
+<p>There are three ways to interact with Ombuds, each method has a different trust model.</p>
 
 <p>This model can be summarized in an image.</p>
 <img id="trustModel" src="/res/draft-trust-model.png">
 
 
 <h2>Desktop</h2>
-<b>Model: Trust the software and your OS.</b>
+<b>Trust Model: Trust our software and your OS.</b>
 <p>
 The desktop client is really a Bitcoin <a href="https://en.bitcoin.it/wiki/Full_node">full node</a>, and thus receives every Bitcoin transaction and every Bitcoin block. 
 The client parses all this information, extracts Ombuds bulletins, and indexes them locally.
@@ -39,7 +39,7 @@ The desktop client has a Bitcoin wallet and an Ombuds messenger. The client veri
 
 
 <h2>Mobile</h2>
-<b>Model: Trust your Bitcoin peers.</b>
+<b>Trust Model: Trust your Bitcoin peers and your phone.</b>
 <p>
 The mobile client includes an SPV client with bloom filters, thus receives only relevant Bitcoin transactions and every Bitcoin block header.  Trusting your Bitcoin peers to honor bloom filters reduces total bandwidth usage and recording only block headers reduces total disk space. Unlike the desktop client, the mobile client does not have an index of all Ombuds statements. 
 </p>
@@ -58,7 +58,7 @@ The mobile client has a full featured Bitcoin wallet and an Ombuds messenger.  T
 <img class="screen" src="/res/phone-view.png">
 
 <h2>Web Relay</h2>
-<b>Model: Trust the operator of a website.</b>
+<b>Trust Model: Trust the operator of a website and HTTPS.</b>
 <p>
 Someone running an Ombuds Desktop Client possesses an index of all Ombuds statements.
 This index can be formatted and delivered as a web page, viewable to anyone with a browser and an uncensored Internet connection.
