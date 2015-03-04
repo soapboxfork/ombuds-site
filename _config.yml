@@ -1,0 +1,12 @@
+markdown: kramdown
+navigation:
+    - text: Concept
+      url: /
+    - text: Software
+      url: /software/
+    - text: "Q&A"
+      url: /questions/
+    - text: Research
+      url: /research/
+    - text: People 
+      url: /people/

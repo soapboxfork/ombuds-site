@@ -15,11 +15,12 @@
                 </div>
                 <div id="navbar">
                     <ul>
-                        <li><a href="/">Concept</a></li>
-                        <li><a href="/software">Software</a></li>
-                        <li><a href="/questions">Q&A</a></li>
-                        <li><a href="/research">Research</a>
-                        <li><a href="/people">People</a>
+                    {% assign url = page.url|remove:'index.html' %}
+                    {% for link in site.navigation %}
+                        <li {% if url == link.url %}class="active"{% endif %}>
+                            <a href="{{link.url}}" title="{{link.text}}">{{link.text}}</a>
+                            </li>
+                    {% endfor %}
                     </ul>
                 </div>
                 <div id="content">

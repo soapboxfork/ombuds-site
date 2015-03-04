@@ -4,7 +4,7 @@ html {
 body {
     background-color: #f7f7f7;
     margin: 0;
-    font-family: "Helvetica Neue" "Arial" "Sans serif";
+    font-family: "Helvetica Neue" "FreeSans" "arial" sans-serif;
     min-height: 100%;
 }
 
@@ -53,26 +53,34 @@ body {
 }
 
 #navbar {
-    background-color: #666666;
+    background-color: #666666; 
+    width: 100%;
 }
 
 #navbar ul {
     width: 100%;
     margin: 0;
-    padding: 5px;
+    padding-left: 0px;
+    height: 27px;
 }
 
 #navbar  li {
     text-align: center;
     display: inline-block;
-    margin: 0 auto;
-    width: 19.4%;
+    background-color: #888888;
+    float: left;
+    width: 180px;
 }
 
 #navbar li a {
     text-decoration: none;
+    text-align: center;
     font-weight: bold;
     color: white;
+}
+
+#navbar li.active {
+    background-color: #666666;
 }
 
 #content {
@@ -125,12 +133,10 @@ h4.add {
 }
 
 #can {
-    padding: 30px 0;
     margin-bottom: 60px;
     margin-left: 25%;
     margin-right: 25%;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    text-decoration: underline;
 }
 
 #financial {
