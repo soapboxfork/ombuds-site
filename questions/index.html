@@ -16,7 +16,7 @@ The reason we are storing messages in a block chain is because there is no way t
 In fact to scale Twister messages posted via Twister are forgetten after a period of time.
 </p>
 
-<h4>How much does it cost to send a message</h4>
+<h4>How much does it cost to send a message?</h4>
 <p>
 There are a few factors that go into computing the price of storing bytes in the blockchain. 
 This widget does the simple analysis.
@@ -38,16 +38,21 @@ So really, we think it is possible, but we don't have a concrete solution becaus
 <p>
 Let's say every tweet is 140 bytes long each public key is 32 bytes and each signature is 73 bytes long.
 </p>
-<code>
->>> msgSize = 32 + 73 + 140
+<pre>
+>>> msgSize = 140 + 32 + 73
 >>> (msgSize * 1e8)/(2.0**30)
-22.817403078079224
-</code>
+22.817
+</pre>
 
 <p>
-This means that it would 23 Gigabytes to just store the tweets and with an indexing overhead of 3x (which is generous) storing 100 million immutable messages end up only taking 69 Gigabytes.
+This means that it would take 23 gigabytes to store the raw tweets and with an indexing overhead of 3x storing 100 million immutable messages ends up only taking 92 gigabytes. 
 </p>
 
 <p>
-Given Bitcoin's arbitrary 1MB block size ceiling this service is far more likely to just drive up transaction fee prices before it incurs a storage burden on the bitcoin network. However, an increase in transaction fees is viewed as a necessary evil that Bitcoin must eventually face anyway. So this service might actually help.
+Typically the most expensive part of hosting data on a peer-to-peer network is bandwidth usage. 
+Hopefully with something like Gavin's O(1) block propogation <a href="https://gist.github.com/gavinandresen/e20c3b5a1d4b97f79ac2">proposal</a> the bandwidth costs associated with running a Bitcoin full node will be partially mitigated.
+</p>
+
+<p>
+Given Bitcoin's 1MB block size ceiling this service is far more likely to just drive up transaction fee prices before it incurs an undue storage burden on the bitcoin network. However, an increase in transaction fees is viewed as a necessary evil that Bitcoin must eventually face anyway. So this service might actually help make Bitcoin sustainable.
 </p>
