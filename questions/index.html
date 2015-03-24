@@ -4,8 +4,50 @@ layout: default
 ---
 
 <h4>How and Why is this different from Twitter?</h4>
-
+<p>
+Twitter relies on the traditional client server model while Ombuds uses a Bitcoin a peer-to-peer network to distribute messages.
+</p>
 
 <h4>How and Why is this different from Twister?</h4>
+<p>
+Twister is another peer-to-peer public messaging tool.
+The difference between Ombuds and Twister is that Twister uses a distributed hash table (DHT) to distribute messages, while Ombuds stores messages in a block chain. 
+The reason we are storing messages in a block chain is because there is no way to guarantee that a message stored in a DHT will remain there.
+In fact to scale Twister messages posted via Twister are forgetten after a period of time.
+</p>
 
+<h4>How much does it cost to send a message</h4>
+<p>
+There are a few factors that go into computing the price of storing bytes in the blockchain. 
+This widget does the simple analysis.
+</p>
 
+<h4>How will Ombuds scale?</h4>
+<p>
+Storing data in a block chain is generally considered a bad idea because of the increased burden it places on the rest of the network. However, the challenge of scaling Ombuds is exactly the challenge of scaling Bitcoin itself. Since ownership of an individual's Bitcoin must be recorded in perpetuity just like Ombuds' bulletins must be stored, good solutions to the second problem can be applied to the second. 
+</p>
+
+<p>
+Generally though, we think that a one-way pegged side chain could generally work as a vehicle to store public statements. The issue is that there must be a critical mass of mining power before the side chain becomes secure enough to trust as a public record. For the moment Bitcoin's block chain is cheap enough, begrudgingly allows this kind of storage and has a global honest hash power greater than most small nations could amass. 
+</p>
+
+<p>
+So really, we think it is possible, but we don't have a concrete solution because at the moment <b>we don't need one</b>. Just consider the storage usage of one hundred million tweets with a public key and a signature attached.
+</p>
+
+<p>
+Let's say every tweet is 140 bytes long each public key is 32 bytes and each signature is 73 bytes long.
+</p>
+<code>
+>>> msgSize = 32 + 73 + 140
+>>> (msgSize * 1e8)/(2.0**30)
+22.817403078079224
+</code>
+
+<p>
+This means that it would 23 Gigabytes to just store the tweets and with an indexing overhead of 3x (which is generous) storing 100 million immutable messages end up only taking 69 Gigabytes.
+</p>
+
+<p>
+Given Bitcoin's arbitrary 1MB block size ceiling this service is far more likely to just drive up transaction fee prices before it incurs a storage burden on the bitcoin network. However, an increase in transaction fees is viewed as a necessary evil that Bitcoin must eventually face anyway. So this service might actually help.
+</p>
