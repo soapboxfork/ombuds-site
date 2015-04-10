@@ -8,7 +8,7 @@
         <div id="wrap"><div id="container">
                 <div id="headline">
                     <h2 class="title">
-                        <a href="/">Soapbox<span class="black">.</span><span class="darkBlue">Systems</span></a>
+                        <a href="/">Om<span class="darkBlue">buds</span></a>
                     </h2>
 
                     <h3 class="phrase">Resilient Public Speech for the Internet</h3>
@@ -56,8 +56,37 @@ In fact to scale Twister messages posted via Twister are forgetten after a perio
 <h4>How much does it cost to send a message?</h4>
 <p>
 There are a few factors that go into computing the price of storing bytes in the blockchain. 
-This widget does the simple analysis.
+This equation explains the cost calculation for a tweet sized message.
+For bigger messages the Tx Fee term gets more complicated, but that is not so important given the use cases
+we are going after.
 </p>
+
+<div class="costForm">
+<p>
+Let the <code>BurnAmount</code> be the minimum amount of bitcoin you can send to an address.
+</p>
+<p>
+Let the <code>PubKeyHashLength</code> be the length in bytes of the output of typical Pay To Public Key Hash outputs.
+</p>
+
+<div id="formula">
+\[ Cost = \left(BurnAmount*\left\lceil\frac{MessageLength}{PubKeyHashLength}\right\rceil + TxFee \right) * \frac{USD}{BTC} \]
+</div>
+
+
+<p>So, to send one tweet sized bulletin at <input id=conversionRate value=250></input> per bitcoin it costs:</a></p>
+
+<h4 id="result">37 cents</h4>
+
+<script>
+    var rate = Number(document.getElementById('conversionRate').value);
+    var fee = 100000*1e-8;
+    var cost = (576*1e-8 * Math.ceil(140/20) + fee ) * (rate/100);
+    document.getElementById('result').textContent = cost + " Cents" 
+</script>
+
+</div>
+
 
 <h4>How will Ombuds scale?</h4>
 <p>
@@ -96,5 +125,6 @@ Given Bitcoin's 1MB block size ceiling this service is far more likely to just d
  
             </div></div>
         </div>
+        <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     </body>
 </html>

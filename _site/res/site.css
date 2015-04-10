@@ -199,3 +199,24 @@ img.screen {
     width: 600px;
     height: auto;
 }
+
+/****************** FAQ Styles ***********************/
+
+.costForm {
+    margin: 30px 0;  
+}
+.costForm  p {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.costForm #result {
+    display: block;
+    text-align: center;
+    margin: 30px auto; 
+}
+
+#formula {
+    margin: 40px 0;
+}
+
