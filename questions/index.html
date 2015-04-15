@@ -37,15 +37,19 @@ Let the <code>PubKeyHashLength</code> be the length in bytes of the output of ty
 </div>
 
 
-<p>So, to send one tweet sized bulletin at <input id=conversionRate value=250></input> per bitcoin it costs:</a></p>
+<p>So, to send one tweet sized bulletin at <input id=conversionRate value=250 onchange="updateCost()"></input> per bitcoin it costs:</a></p>
 
 <h4 id="result">37 cents</h4>
 
 <script>
-    var rate = Number(document.getElementById('conversionRate').value);
-    var fee = 40000;
-    var cost = (576 * Math.ceil(140/20) + fee ) * (rate*1e-8);
-    document.getElementById('result').textContent = cost + " Cents" 
+    function updateCost() {
+        var rate = Number(document.getElementById('conversionRate').value);
+        var fee = 50000;
+        var cost = (576 * Math.ceil(140/20) + fee ) * (rate*1e-6);
+        document.getElementById('result').textContent = cost.toFixed(2) + " Cents" 
+    }
+    updateCost();
+     
 </script>
 
 </div>
