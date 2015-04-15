@@ -43,8 +43,8 @@ Let the <code>PubKeyHashLength</code> be the length in bytes of the output of ty
 
 <script>
     var rate = Number(document.getElementById('conversionRate').value);
-    var fee = 100000*1e-8;
-    var cost = (576*1e-8 * Math.ceil(140/20) + fee ) * (rate/100);
+    var fee = 40000;
+    var cost = (576 * Math.ceil(140/20) + fee ) * (rate*1e-8);
     document.getElementById('result').textContent = cost + " Cents" 
 </script>
 
