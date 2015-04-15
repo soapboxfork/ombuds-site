@@ -31,6 +31,9 @@ Let the <code>BurnAmount</code> be the minimum amount of bitcoin you can send to
 <p>
 Let the <code>PubKeyHashLength</code> be the length in bytes of the output of typical Pay To Public Key Hash outputs.
 </p>
+<p>
+Let the <code>TxFee</code> be five times the standard transaction processing fee a Bitcoin transaction pays.
+</p>
 
 <div id="formula">
 \[ Cost = \left(BurnAmount*\left\lceil\frac{MessageLength}{PubKeyHashLength}\right\rceil + TxFee \right) * \frac{USD}{BTC} \]
