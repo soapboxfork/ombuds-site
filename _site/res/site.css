@@ -104,6 +104,7 @@ a:hover,
 #vidya {
     width: 100%;
     margin: 50px 0;
+    position: relative;
 }
 
 #vidya iframe {
@@ -113,8 +114,8 @@ a:hover,
 
 #sideways {
     position: absolute;
-    top: 220px;
-    right: 130px;
+    top: 90px;
+    right: -55px;
     font-size: 3em;
 
     -webkit-transform: rotate(90deg);
