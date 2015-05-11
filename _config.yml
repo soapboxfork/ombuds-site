@@ -4,8 +4,6 @@ navigation:
       url: /
     - text: Software
       url: /software/
-    - text: "Q&A"
-      url: /questions/
     - text: Research
       url: /research/
     - text: People 

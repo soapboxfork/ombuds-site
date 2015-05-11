@@ -7,21 +7,20 @@
     <body>
         <div id="wrap"><div id="container">
                 <div id="headline">
-                    <h2 class="title">
-                        <a href="/">Om<span class="darkBlue">buds</span></a>
-                    </h2>
-
-                    <h3 class="phrase">Resilient Public Speech for the Internet</h3>
-                </div>
-                <div id="navbar">
-                    <ul>
-                    {% assign url = page.url|remove:'index.html' %}
-                    {% for link in site.navigation %}
-                        <li {% if url == link.url %}class="active"{% endif %}>
-                            <a href="{{link.url}}" title="{{link.text}}">{{link.text}}</a>
-                            </li>
-                    {% endfor %}
-                    </ul>
+                    <img id="logo" src="/res/OmbudsLogoText.png" />
+                    <div id="navbar">
+                        <p>
+                        {% assign url = page.url|remove:'index.html' %}
+                        {% for link in site.navigation %}
+                            {% unless forloop.first %}
+                            <span>&bull;</span>
+                            {% endunless %}
+                            <a href="{{link.url}}"
+                                {% if url == link.url %}class="active"{% endif %}
+                                title="{{link.text}}">{{link.text}}</a>
+                        {% endfor %}
+                        </p>
+                    </div>
                 </div>
                 <div id="content">
                     {{ content }} 
