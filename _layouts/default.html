@@ -12,20 +12,23 @@
                         <p>
                         {% assign url = page.url|remove:'index.html' %}
                         {% for link in site.navigation %}
-                            {% unless forloop.first %}
-                            <span>&bull;</span>
-                            {% endunless %}
-                            <a href="{{link.url}}"
-                                {% if url == link.url %}class="active"{% endif %}
-                                title="{{link.text}}">{{link.text}}</a>
+                        {% unless forloop.first %}
+                        <span>&bull;</span>
+                        {% endunless %}
+                        <a href="{{link.url}}"
+                            {% if url == link.url %}class="active"{% endif %}
+                            title="{{link.text}}">{{link.text}}</a>
                         {% endfor %}
                         </p>
                     </div>
                 </div>
                 <div id="content">
                     {{ content }} 
-            </div></div>
-        </div>
+                </div>
+                <div id="footer">
+                    <p>&copy; 2015 <a class="big-link" href="https://github.com/soapboxsys">Soapbox Systems</a></p>
+                </div>
+        </div></div>
         <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     </body>
 </html>

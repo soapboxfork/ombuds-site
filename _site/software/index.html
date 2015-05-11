@@ -12,31 +12,31 @@
                         <p>
                         
                         
-                            
-                            <a href="/"
-                                
-                                title="Concept">Concept</a>
                         
+                        <a href="/"
                             
-                            <span>&bull;</span>
-                            
-                            <a href="/software/"
-                                class="active"
-                                title="Software">Software</a>
+                            title="Concept">Concept</a>
                         
-                            
-                            <span>&bull;</span>
-                            
-                            <a href="/research/"
-                                
-                                title="Research">Research</a>
                         
+                        <span>&bull;</span>
+                        
+                        <a href="/software/"
+                            class="active"
+                            title="Software">Software</a>
+                        
+                        
+                        <span>&bull;</span>
+                        
+                        <a href="/research/"
                             
-                            <span>&bull;</span>
+                            title="Research">Research</a>
+                        
+                        
+                        <span>&bull;</span>
+                        
+                        <a href="/people/"
                             
-                            <a href="/people/"
-                                
-                                title="People">People</a>
+                            title="People">People</a>
                         
                         </p>
                     </div>
@@ -55,7 +55,11 @@ If you are an android developer and want a first look at what we have then sign 
 
 <p>There are three ways to interact with Ombuds, each method has a different trust model.</p>
 
-<h2>Desktop</h2>
+<div class="platform">
+    <a href="https://github.com/soapboxsys/OmbudsCore">
+    <h2 class="big-link">Desktop</h2>
+   <img src="/res/octocat.png"></a>
+</div>
 <b>Trust Model: Trust our software and your OS.</b>
 <p>
 The desktop client is really a Bitcoin <a href="https://en.bitcoin.it/wiki/Full_node">full node</a>, and thus receives every Bitcoin transaction and every Bitcoin block. 
@@ -75,8 +79,12 @@ The desktop client has a Bitcoin wallet and an Ombuds messenger. The client veri
 
 
 
-
-<h2>Mobile</h2>
+<div class="platform">
+    <a href="https://github.com/alexkuck/ahimsa-app">
+        <h2 class="big-link">Mobile</h2>
+        <img src="/res/octocat.png">
+    </a>
+</div>
 <b>Trust Model: Trust your Bitcoin peers and your phone.</b>
 <p>
 The mobile client includes an SPV client with bloom filters, thus receives only relevant Bitcoin transactions and every Bitcoin block header.  Trusting your Bitcoin peers to honor bloom filters reduces total bandwidth usage and recording only block headers reduces total disk space. Unlike the desktop client, the mobile client does not have an index of all Ombuds statements. 
@@ -86,16 +94,15 @@ This means that a user's peers could deny relevant information to the device and
 </p>
 
 <p>
-The mobile client has a full featured Bitcoin wallet and an Ombuds messenger.  The mobile client confirms block chain inclusion of Ombuds bulletins, but again it is reliant on peers honoring bloom filters. In practice however, peers do honor bloom filters. Here are some nice pictures:
+The mobile client has a full featured Bitcoin wallet and an Ombuds messenger.  The mobile client confirms block chain inclusion of Ombuds bulletins, but again it is reliant on peers honoring bloom filters. In practice however, peers do honor bloom filters.
 </p>
 
-<img class="screen" src="/res/phone-wallet.png">
-
-<img class="screen" src="/res/phone-send.png">
-
-<img class="screen" src="/res/phone-view.png">
-
-<h2>Web Relay</h2>
+<div class="platform">
+    <a href="https://github.com/NSkelsey/ahimsa-web">
+        <h2 class="big-link">Web Relay</h2>
+        <img src="/res/octocat.png" />
+    </a>
+</div>
 <b>Trust Model: Trust the operator of a website and HTTPS.</b>
 <p>
 Someone running an Ombuds Desktop Client possesses an index of all Ombuds statements.
@@ -112,8 +119,11 @@ But a provably complete record of bulletins is in the hands of the website opera
 
 <img class="screen" src="/res/web-messages.png">
  
-            </div></div>
-        </div>
+                </div>
+                <div id="footer">
+                    <p>&copy; 2015 <a class="big-link" href="https://github.com/soapboxsys">Soapbox Systems</a></p>
+                </div>
+        </div></div>
         <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
     </body>
 </html>

@@ -13,7 +13,7 @@ body {
     margin: 0 auto;
     background-color: white;
     height: 100%;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     box-shadow: 0 0 1px black;
 }
 
@@ -30,10 +30,26 @@ a {
     color: #608DEF; 
 }
 
-a:hover {
+a:hover,
+.big-link:hover {
     color: #608DEF;
     border-bottom: 1px solid #608DEF;
     text-decoration: none;
+}
+
+
+/**************** Footer Styles *****************/
+#footer {
+    margin-top: 30px;
+    border-top: 1px solid #CCC;
+}
+
+#footer p {
+    text-align: right; 
+}
+
+#footer a {
+    color: #555;
 }
 
 /*************** Headline Styles ******************/
@@ -67,7 +83,7 @@ a:hover {
 }
 
 #navbar a,
-a.big-link {
+.big-link {
     font-weight: bold;
     text-decoration: None;
     color: black;
@@ -75,12 +91,12 @@ a.big-link {
 }
 
 #navbar a:hover,
-a.big-link:hover {
+.big-link:hover {
     border-bottom: 1px solid #608DEF;
 }
 
 #navbar a.active {
-    color: rgb(100, 100, 100);
+    color: #696969;
 }
 
 /********** Home Page Styles ***********/
@@ -93,6 +109,32 @@ a.big-link:hover {
 #vidya iframe {
     display: block;
     margin: 0 auto;
+}
+
+#sideways {
+    position: absolute;
+    top: 220px;
+    right: 130px;
+    font-size: 3em;
+
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+
+      -webkit-transition: -webkit-transform .8s ease-in-out;
+        transition: transform .8s ease-in-out;
+}
+
+#sideways:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#how {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #CCC;
 }
 
 
@@ -162,6 +204,23 @@ img.screen {
     margin-top: 20px;
     width: 600px;
     height: auto;
+}
+
+div.platform {
+    overflow: auto;
+}
+
+.platform img {
+    width: 32px;
+    height: 32px;
+    margin-left: 19px;
+    margin-top: 19px;
+    float: left;
+}
+
+.platform h2 {
+    display: inline-block;
+    float: left;
 }
 
 /****************** Research Styles ***********************/
