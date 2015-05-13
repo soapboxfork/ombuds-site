@@ -65,6 +65,10 @@ a:hover,
     height: 61px;
 }
 
+#headline a.logo-a {
+    border-bottom: None;
+}
+
 /*************** Navbar Styles ******************/
 #navbar {
     float: right;
