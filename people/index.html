@@ -24,6 +24,22 @@ layout: default
     </div>
 </div>
 
+<h2>Advisors</h2>
+<div class="row-adv-imgs">
+    {% for person in site.data.people %}
+    <div>
+        <a href="{{ person.url }}">
+            <img src="/res/images/people/{{ person.img_url }}" />
+        </a>
+        <h4>
+            <a href="{{ person.url }}" class="big-link">{{ person.name }}</a>
+        </h4>
+        <p>{{ person.title }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
 
 <h2>Organizations</h2>
 

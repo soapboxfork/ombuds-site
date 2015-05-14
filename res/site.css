@@ -177,6 +177,29 @@ div.text p.links :first-child {
     margin-left: 0;
 }
 
+/* Advisors styles */
+div.row-adv-imgs div {
+   display: inline-block; 
+   width: 220px;
+   height: 225px;
+}
+
+div.row-adv-imgs h4 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+div.row-adv-imgs p {
+    text-align: center;
+}
+
+div.row-adv-imgs img {
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+
+/* Organization styles */
 div.org-imgs {
     position: relative;
     height: 140px;
@@ -187,7 +210,8 @@ div.org-imgs div {
     display: inline-block;
 }
 
-div.org-imgs img {
+div.org-imgs img,
+div.row-adv-imgs img {
     height: auto;
     width: 120px;
     vertical-align: middle;
