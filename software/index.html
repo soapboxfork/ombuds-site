@@ -7,11 +7,10 @@ layout: default
 
 <p>
 For an end user who just wants to download something, we have one piece of software for you to test out.
-If you run a Unix OS you can (theoretically) download and build a desktop client from <a href="https://github.com/soapboxsys/OmbudsCore">Github</a>.
-If you are an android developer and want a first look at what we have then sign up for the alpha release <a href="https://play.google.com/apps/testing/io.ahimsa.ahimsa_app">here</a>. 
+If you run a Unix OS you can download builds of a desktop client from <a href="https://github.com/soapboxsys/OmbudsCore/releases">Github</a>.
 </p>
 
-<p>This is what Ombuds looks like running on a desktop. If you would like some explanation checkout this <a href="https://www.youtube.com/watch?v=RWl6Avri8J8">video</a>.</p>
+<p>This is what Ombuds looks like running on a desktop. If you would like an explanation checkout this <a href="https://www.youtube.com/watch?v=RWl6Avri8J8">video</a>.</p>
 <img id="trustModel" src="/res/out.gif">
 
 <p>There are three ways to interact with Ombuds, each method has a different trust model.</p>
@@ -23,7 +22,7 @@ If you are an android developer and want a first look at what we have then sign 
 </div>
 <b>Trust Model: Trust our software and your OS.</b>
 <p>
-The desktop client is really a Bitcoin <a href="https://en.bitcoin.it/wiki/Full_node">full node</a>, and thus receives every Bitcoin transaction and every Bitcoin block. 
+The desktop client is really a Bitcoin <a href="https://en.bitcoin.it/wiki/Full_node">full node</a>. It thus receives every Bitcoin transaction and every Bitcoin block. 
 The client parses all this information, extracts Ombuds bulletins, and indexes them locally.
 Every Ombuds statement ever published in the block chain can be read using the desktop client.
 This provably complete record comes at the cost of disk space, processing power, and bandwidth.
@@ -48,14 +47,14 @@ The desktop client has a Bitcoin wallet and an Ombuds messenger. The client veri
 </div>
 <b>Trust Model: Trust your Bitcoin peers and your phone.</b>
 <p>
-The mobile client includes an SPV client with bloom filters, thus receives only relevant Bitcoin transactions and every Bitcoin block header.  Trusting your Bitcoin peers to honor bloom filters reduces total bandwidth usage and recording only block headers reduces total disk space. Unlike the desktop client, the mobile client does not have an index of all Ombuds statements. 
+The mobile client includes an SPV client with bloom filters. It thus receives only relevant Bitcoin transactions and every Bitcoin block header.  Trusting your Bitcoin peers to honor bloom filters reduces total bandwidth usage and recording only block headers reduces total disk space. Unlike the desktop client, the mobile client does not have an index of all Ombuds' statements. 
 </p>
 <p>
 This means that a user's peers could deny relevant information to the device and even prevent it from publishing if it had full control over the devices ability to connect to "honest" peers. These compromises are necessary for mobile devices that cannot run the full node.
 </p>
 
 <p>
-The mobile client has a full featured Bitcoin wallet and an Ombuds messenger.  The mobile client confirms block chain inclusion of Ombuds bulletins, but again it is reliant on peers honoring bloom filters. In practice however, peers do honor bloom filters.
+The mobile client has a full featured Bitcoin wallet and an Ombuds messenger.  The mobile client confirms block chain inclusion of Ombuds bulletins, but again relies on peers honoring bloom filters. In practice however, peers do honor bloom filters.
 </p>
 
 <div class="platform">
