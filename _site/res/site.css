@@ -205,6 +205,10 @@ div.org-imgs {
     height: 140px;
 }
 
+div.org-imgs.last {
+    height: 90px;
+}
+
 div.org-imgs div {
     margin: 10px 50px;
     display: inline-block;
@@ -220,6 +224,12 @@ div.row-adv-imgs img {
 div.org-imgs a:hover {
     border-bottom: none;     
 }
+
+#knight-logo {
+    height: 50px;
+    width: auto;
+}
+
 
 /******************* Software Styles ********************/
 
