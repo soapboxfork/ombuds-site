@@ -3,26 +3,22 @@ title: people
 layout: default
 ---
 <h2>Project Leads</h2>
+{% for person in site.data.leads %}
 <div class="about">
     <div class="headshot">
-        <img src="/res/alex.png" >
+        <img src="/res/{{ person.img }}" >
     </div>
     <div class="text">
-        <h3>Alex Kuck</h3>
-        <p>A proud citizen of the Internet with interests in sensor networks, mobile tech, cryptography, and distributed systems; non-computer hobbies include hiking, trains, and books on quantum mechanics (which he understands 6.62606957 x 10^(-34) percent of).</p>
-        <p class="links"><a href="https://kuck.io">Site</a> | <a href="http://github.com/alexkuck">Github</a> | <a href="https://keybase.io/askuck">Keybase</a></p>
+        <h3>{{ person.name }}</h3>
+        <p>{{ person.blurb }}</p>
+        <p class="links">
+            {% for link in person.ext_sites %}  
+            <a href="{{ link.url }}">{{ link.txt }}</a> <span>|</span>
+            {% endfor %}
+        </p>
     </div>
 </div>
-<div class="about">
-    <div class="headshot">
-        <img src="/res/nick.png" >
-    </div>
-    <div class="text">
-        <h3>Nick Skelsey</h3>
-        <p>A systems programmer with a passion for open government, Bitcoin, Oxford commas and Helvetica. Nick occasionally refers to himself in the third person and is a supporter of satire, short bios, and content that looks good on Web pages.</p>
-        <p class="links"><a href="https://nskelsey.com">Site</a> | <a href="http://github.com/NSkelsey">Github</a> | <a href="https://keybase.io/nskelsey">Keybase</a></p>
-    </div>
-</div>
+{% endfor %}
 
 <h2>Advisors</h2>
 <div class="row-adv-imgs">
@@ -45,7 +41,7 @@ layout: default
 
 <p>
 We have recieved support of some kind or another from the great people within these organizations.
-So go check them out. They are all awesome!
+Go check them out.
 </p>
 
 <div class="org-imgs">

@@ -177,6 +177,10 @@ div.text p.links :first-child {
     margin-left: 0;
 }
 
+div.text p.links :last-child {
+    display: none;
+}
+
 /* Advisors styles */
 div.row-adv-imgs div {
    display: inline-block; 
